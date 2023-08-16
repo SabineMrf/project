@@ -14,7 +14,7 @@ body {
 
 .myimage{
     background-image: url(./images/background.jpg);
-    height: 665px;
+    height: 900px;
     
 }
 
@@ -99,7 +99,13 @@ section.boxes{
     box-shadow: 0 3px 5px rgba(0,0, 0, 6);
     padding:15px 20px;
     
+    
    
+}
+button{
+    border: none;
+    background-color: lightgoldenrodyellow;
+cursor: pointer;
 }
 ul li {
     margin: 20px;

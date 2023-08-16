@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css">
     
     <title>Moka Arabia </title>
+   
  
 </head>
 <body>
@@ -17,13 +18,13 @@
             <h3>YourworldtoCoffee</h3>
             <ul class="nav">
                 <li>
-                    <a href="#">Home</a>
+                    <a href="index.html">Home</a>
                 </li>
                 <li>
-                    <a href="#">About</a>
+                    <a href="about.html">About</a>
                 </li>
                 <li>
-                    <a href="#">Contact</a>
+                    <a href="contact.html">Contact</a>
                 </li>
             </ul>
         </div>
@@ -41,21 +42,79 @@
 
     <section class="boxes">
         <div class="container">
+            
             <div class="box">
-                
+                <div id="imageContainer" >
+                <button id="loadImageButton">CLICK HERE TO SEE OUR COFFEE PRODUCT</button>
                 <h2>PRODUCTS & COFFEE</h2>
-                <P>Here are the products designed and made by our company </P>
+                <P>Here is the products designed and made by our company </P>
+                </button>
+                </div>
             </div>
         </div>
         <div class="container">
             <div class="box">
-                <h2>PRODUCTS & COFFEE</h2>
-                <P>Here are the products designed and made by our company </P>
+                <div id="imageContainer1">
+                    <button id="loadImageButton1">CLICK HERE TO SEE OUR Nescafe PRODUCT</button>
+               
+                <h2>PRODUCTS & Nescafe</h2>
+                <P>Here is the product designed and made by our company </P>
+                </button>
+                </div>
             </div>
         </div>
+     <br>
+     <br>
+    
+    
+    <script>
+        const loadImageButton = document.getElementById("loadImageButton");
+        const imageContainer = document.getElementById("imageContainer");
+
+    const loadImageButton1 = document.getElementById("loadImageButton1");
+    const imageContainer1 = document.getElementById("imageContainer1");
+          
+
+        loadImageButton.addEventListener("click", function () {
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", "images/cofcof.jpeg", true); 
+            xhr.responseType = "blob"; 
+            xhr.onload = function () {
+                const imageUrl = URL.createObjectURL(xhr.response);
+                const imageElement = document.createElement("img");
+                imageElement.src = imageUrl;
+                imageContainer.innerHTML = ""; 
+                imageContainer.appendChild(imageElement);
+            };
+            xhr.send();
+        });
+
+        loadImageButton1.addEventListener("click", function () {
+                const xhr = new XMLHttpRequest();
+                xhr.open("GET", "images/nesnes.jpeg", true);
+                xhr.responseType = "blob";
+                xhr.onload = function () {
+                    const imageUrl = URL.createObjectURL(xhr.response);
+                    const imageElement = document.createElement("img");
+                    imageElement.src = imageUrl;
+                    imageContainer1.innerHTML = "";
+                    imageContainer1.appendChild(imageElement);
+                };
+                xhr.send();
+            });
+    </script>
+
+
         
-        </div>
+   
+    
+ 
+       
     </section>
-    </div>
+    <br>
+    <br>
+    <p>copyright &copy;</p>
+    <a href="#top" >back to top</a>
+    
 </body>
 </html>

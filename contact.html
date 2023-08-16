@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Moka Arabia </title>
+
+</head>
+
+<body>
+
+    <div class="myimage">
+        <nav class="navbar">
+            <div class="container">
+
+                <h3>YourworldtoCoffee</h3>
+                <ul class="nav">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <header class="header">
+            <div class="container">
+                <img src="./images/mokaarab.png" altl="company">
+                <div>
+                    <h1>Welcome To MOKA ARABIA'S Website</h1>
+
+
+
+                </div>
+                </div>
+            </header>
+           
+            <form id="myForm">
+                
+                <label for="name">Name:</label>
+                
+               
+                <input type="text" id="name" name="name" placeholder="Enter your name">
+                
+                <button type="submit">Submit</button>
+                <br>
+                <br>
+                <label for="email">Email:</label>
+                
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+                <button type="submit">Submit</button>
+                <br>
+                <br>
+                
+                <br>
+                <br>
+                <label for="">Your messages:</label>
+                <textarea type="text" class="form-control" placeholder="Enter your Message" name="the_message"
+                    style="border:1px solid #cdcdcd; height:90px; font-family:futuramdbt;"></textarea>
+                    <button type="submit">Submit</button>
+
+                
+            </form>
+            
+            <script>
+                document.getElementById("myForm").addEventListener("submit", function (event) {
+                    const nameInput = document.getElementById("name");
+                     const emailInput = document.getElementById("email");
+
+                    if (!nameInput.value) {
+                        event.preventDefault();
+                        alert("Please enter your name!");
+
+                         if (!emailInput.value) {
+                            event.preventDefault();
+                            alert("Please enter your email!"); 
+                         }
+                    }
+                });
+            </script>
+            <br>
+            <br>
+            <p>copyright &copy;</p>
+            <a href="#top">back to top</a>
+            </body>
+            
+            </html>

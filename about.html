@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Moka Arabia </title>
+
+</head>
+
+<body>
+
+    <div class="myimage">
+        <nav class="navbar">
+            <div class="container">
+
+                <h3>YourworldtoCoffee</h3>
+                <ul class="nav">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <header class="header">
+            <div class="container">
+                <img src="./images/mokaarab.png" altl="company">
+                <div>
+                    <h1>Welcome To MOKA ARABIA'S Website</h1>
+        
+        
+        
+                </div>
+                
+                </header>
+                
+                <section class="boxes">
+                    <div class="container">
+                        <div class="box">
+                            <button id="products">
+                
+                            <h2>PRODUCTS & COFFEE</h2>
+                            <P>Here are the products designed and made by our company </P>
+                            </button>
+                          <br><br>
+                          <div id="text"></div>
+
+                        </div>
+                    </div>
+            </div>
+            
+        </header>
+        <script>
+            const products = document.getElementById('products').addEventListener('click', loadText);
+            function loadText(){
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET','sample.txt', true );
+
+                xhr.onload= function(){
+                    if(this.status == 200){
+                        document.getElementById('text').innerHTML= this.responseText
+                    }
+                }
+                xhr.send();
+            }
+
+        </script>
+        <br>
+        <br>
+        <p>copyright &copy;</p>
+        <a href="#top">back to top</a>
+</body>
+</html>
